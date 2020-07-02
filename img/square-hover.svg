@@ -1,0 +1,22 @@
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <style>.cls-1 {
+        fill-opacity: 0;
+        stroke: #29d3d1;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+        fill-rule: evenodd;
+      }</style>
+  <filter id="Rectangle_18_copy_2_blur">
+   <feGaussianBlur stdDeviation="0" in="SourceGraphic"/>
+  </filter>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="482" width="642" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path stroke="null" filter="url(#Rectangle_18_copy_2_blur)" d="m286.64394,16.256512l198.518421,189.367095a51.042854,48.693005 0 0 1 0,68.864082l-198.518421,189.367095a51.042854,48.693005 0 0 1 -72.174596,0l-198.518421,-189.367095a51.042854,48.693005 0 0 1 0,-68.864082l198.518421,-189.367095a51.042854,48.693005 0 0 1 72.174596,0z" class="cls-1" id="Rectangle_18_copy_2"/>
+ </g>
+</svg>

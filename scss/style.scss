@@ -1,0 +1,1293 @@
+@import "vars";
+@import "fonts";
+@import "global";
+@import "media";
+
+body {
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1280px + 2 * $padContainer;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 $padContainer;
+
+  @include w400 {
+    max-width: 1280px + 2 * $padContainer400;
+    padding: 0 $padContainer400;
+  }
+
+  @include w350 {
+    max-width: 1280px + 2 * $padContainer350;
+    padding: 0 $padContainer350;
+  }
+}
+
+.header-partners-footer__padding {
+  max-width: 1280px + 2 * $padContainer;
+  margin: 0 auto;
+}
+
+.header {
+  margin: 0 auto;
+
+  color: #ffffff;
+
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 35px;
+
+    @include w750 {
+      display: none;
+    }
+  }
+}
+.header-inner {
+  position: relative;
+}
+
+.header__partner-btn {
+  padding: 11px 25px;
+
+  font-size: 15px;
+  line-height: 12px;
+  font-family: "Futura Demi C", Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 6px;
+
+  transition: all 0.4s;
+  &:hover {
+    border: 2px solid $mainColor;
+  }
+}
+
+.social__item {
+  display: inline-block;
+}
+
+.social__link {
+  position: relative;
+
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 41px;
+    height: 41px;
+
+    background-image: url("../img/square.svg");
+
+    transition: all 0.4s;
+  }
+
+  &:hover::before {
+    opacity: 0.5;
+  }
+}
+.logo {
+  position: absolute;
+  top: 45%;
+
+  display: inline-block;
+  margin-left: 140px;
+
+  @include w1196 {
+    top: 40%;
+    right: 0;
+    left: 0;
+
+    width: 700px;
+    margin: 0 auto;
+  }
+
+  @include w1000 {
+    width: 500px;
+  }
+
+  @include w750 {
+    top: 50%;
+
+    width: 72%;
+
+    transform: translateY(-45%);
+  }
+
+  @include w550 {
+    width: 80%;
+  }
+
+  @include w450 {
+    width: 90%;
+  }
+
+  @include w400 {
+    width: 95%;
+  }
+
+  &__title {
+    width: 401px;
+
+    @include w1196 {
+      width: 100%;
+    }
+
+    &-upper {
+      position: absolute;
+      top: -45px;
+      right: 0;
+
+      padding: 7px;
+
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 12px;
+      font-family: "SF UI Display Light", Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+
+      background: $mainColor;
+
+      @include w1196 {
+        padding: 11px 8px;
+
+        font-size: 15px;
+      }
+
+      @include w1000 {
+        padding: 10px 9px;
+
+        font-size: 14px;
+      }
+
+      @include w750 {
+        padding: 8px 5px;
+
+        font-size: 13px;
+      }
+
+      @include w650 {
+        padding: 7px 4px;
+
+        font-size: 12px;
+      }
+
+      @include w450 {
+        padding: 5px 2px;
+
+        font-size: 11px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+
+        width: 9px;
+        height: 10px;
+
+        background-image: url("../img/rectangle.svg");
+        background-repeat: no-repeat;
+        background-position: top center;
+      }
+    }
+  }
+
+  &__subtitle {
+    position: relative;
+
+    margin-top: 21px;
+
+    font-size: 17px;
+    line-height: 12px;
+    font-family: "Futura PT - Book", Arial, Helvetica, sans-serif;
+    text-align: center;
+    letter-spacing: 1.34px;
+
+    @include w1196 {
+      margin-top: 24px;
+
+      font-size: 32px;
+      line-height: 23px;
+    }
+
+    @include w650 {
+      margin-top: 5%;
+
+      font-size: 26px;
+    }
+
+    @include w550 {
+      font-size: 24px;
+    }
+
+    @include w450 {
+      font-size: 22px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+
+      width: 150px;
+
+      border: 0.5px solid #ffffff;
+      opacity: 0.1;
+
+      @include w1196 {
+        width: 270px;
+      }
+
+      @include w1000 {
+        top: 62%;
+
+        width: 33%;
+      }
+
+      @include w550 {
+        width: 32%;
+      }
+
+      @include w400 {
+        width: 29%;
+      }
+
+      @include w350 {
+        width: 27%;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      width: 150px;
+
+      border: 0.5px solid #ffffff;
+      opacity: 0.1;
+
+      @include w1196 {
+        width: 270px;
+      }
+
+      @include w1000 {
+        top: 62%;
+
+        width: 33%;
+      }
+
+      @include w550 {
+        width: 32%;
+      }
+
+      @include w400 {
+        width: 29%;
+      }
+
+      @include w350 {
+        width: 27%;
+      }
+    }
+  }
+
+  &__download {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+
+    &-item {
+      width: 192px;
+
+      border: 2px solid rgba(#ffffff, 0.1);
+      border-radius: 6px;
+
+      transition: all 0.4s;
+
+      @include w1196 {
+        width: 48%;
+      }
+
+      &:hover {
+        border: 2px solid $mainColor;
+      }
+    }
+  }
+}
+.header__phone {
+  position: absolute;
+  right: 10px;
+  z-index: 2;
+
+  margin-top: 159px;
+
+  @include w1196 {
+    display: none;
+  }
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 45.5px;
+  left: 50%;
+  z-index: 3;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 277px;
+  margin-right: -50%;
+  padding: 17px 0 15px 0;
+
+  font-size: 14px;
+  font-family: "Futura PT - Book", Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.12px;
+
+  background-color: $mainColor;
+  border: none;
+  border-radius: 10px;
+  box-shadow: -2px -8px 57px rgba(0, 0, 0, 0.54);
+  transform: scale(var(--scale--ratio)) translateX(-50%);
+  cursor: pointer;
+
+  transition: transform 0.4s;
+  @include w1196 {
+    display: none;
+  }
+
+  &:hover {
+    --scale--ratio: 1.03;
+  }
+
+  &__img {
+    width: 37px;
+  }
+}
+
+.advantages {
+  position: relative;
+  z-index: 2;
+
+  padding: 96px 0 134px 0;
+
+  background-color: #ffffff;
+
+  @include w1580 {
+    padding-bottom: 314px;
+  }
+
+  @include w1247 {
+    padding-top: 63px;
+    padding-bottom: 18px;
+  }
+
+  @include w400 {
+    padding-top: 30px;
+  }
+
+  &__container {
+    max-width: 1330px + 2 * $padContainer;
+    margin: 0 auto;
+    padding: 0 $padContainer;
+  }
+
+  &-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -20px;
+
+    @include w1247 {
+      margin: 0;
+    }
+
+    @include w720 {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    width: 257px;
+    margin: 0 20px;
+
+    text-align: center;
+
+    @include w1247 {
+      width: 50%;
+      margin: 0 0 45px 0;
+    }
+
+    @include w720 {
+      width: 100%;
+    }
+
+    @include w400 {
+      margin: 0 0 35px 0;
+    }
+
+    &:nth-child(4) {
+      @include w1247 {
+        order: 3;
+      }
+    }
+
+    &:nth-child(3) {
+      @include w1247 {
+        order: 2;
+      }
+    }
+
+    &:nth-child(2) {
+      @include w1247 {
+        order: 4;
+      }
+    }
+
+    &:nth-child(1) {
+      @include w1247 {
+        order: 1;
+      }
+    }
+
+    &-img {
+      width: 86px;
+      height: 86px;
+    }
+
+    &-title {
+      margin-top: 21px;
+
+      font-size: 22px;
+      line-height: 19px;
+      font-family: "Futura Demi C", Arial, Helvetica, sans-serif;
+      color: #000000;
+      text-transform: uppercase;
+
+      @include w1247 {
+        width: 311px;
+        margin: 12px auto 0 auto;
+      }
+
+      @include w720 {
+        margin: 8px auto 0 auto;
+      }
+
+      @include w400 {
+        width: 100%;
+
+        font-size: 20px;
+      }
+    }
+
+    &-descr {
+      margin-top: 14px;
+
+      font-size: 18px;
+      font-family: "Futura PT - Book", Arial, Helvetica, sans-serif;
+      color: #000000;
+
+      @include w1247 {
+        width: 315px;
+        margin: 10px auto 0 auto;
+
+        font-size: 22px;
+      }
+
+      @include w400 {
+        width: 90%;
+
+        font-size: 18px;
+      }
+    }
+  }
+}
+.account {
+  position: relative;
+  z-index: 2;
+
+  height: 431px;
+
+  color: #ffffff;
+
+  background-color: $mainColor;
+
+  @include w1580 {
+    display: none;
+  }
+
+  &__slider-wrap {
+    position: absolute;
+    top: -67px;
+    left: 254px;
+    z-index: 3;
+  }
+
+  &__container {
+    max-width: 1610px;
+    margin: 0 auto;
+    padding: 0 5px;
+  }
+
+  &-inner {
+    position: relative;
+  }
+
+  &__slider {
+    position: absolute;
+    top: 67px;
+    left: 63px;
+    z-index: 2;
+
+    width: 243px;
+  }
+
+  &__slide {
+    cursor: grab;
+  }
+
+  &__tabs {
+    padding: 69px 0 42px 0;
+
+    font-size: 0;
+  }
+
+  &__descr {
+    max-width: 662px;
+
+    font-size: 20px;
+    line-height: 26px;
+    font-family: "Futura PT - Book", Arial, Helvetica, sans-serif;
+
+    &-text {
+      display: none;
+
+      &--active {
+        display: block;
+      }
+
+      &--passive {
+        display: none;
+      }
+    }
+
+    p:first-child {
+      padding-bottom: 25px;
+    }
+  }
+}
+.tab-item {
+  position: relative;
+
+  display: inline-block;
+  padding-bottom: 15px;
+
+  font-size: 32px;
+  line-height: 28px;
+  font-family: "Futura Demi C", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+
+  cursor: pointer;
+  opacity: 0.3;
+
+  &:first-child {
+    margin: 0 366px 0 63px;
+  }
+
+  &:not(:first-child) {
+    margin-right: 32px;
+  }
+}
+
+.item--active-opacity {
+  opacity: 1;
+}
+
+.item--active-border {
+  border-bottom: 4px solid #ffffff;
+}
+
+.sales {
+  position: relative;
+  z-index: 2;
+
+  margin-top: 314px;
+
+  background-color: #eeeded;
+
+  @include w1580 {
+    margin-top: 0;
+  }
+
+  @include w1247 {
+    text-align: center;
+
+    background-color: #ffffff;
+  }
+
+  &__text {
+    display: inline-block;
+    padding: 73px 25px 178px 10%;
+
+    color: #000000;
+
+    @include w1340 {
+      padding: 73px 0 178px 10%;
+    }
+
+    @include w1247 {
+      padding: 40px 0 0 0;
+    }
+
+    @include w550 {
+      padding-top: 30px;
+    }
+
+    @include w450 {
+      padding-top: 25px;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 27px;
+    font-family: "Futura Demi C", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+
+    @include w1247 {
+      font-size: 36px;
+      line-height: 31px;
+    }
+
+    @include w650 {
+      font-size: 30px;
+    }
+
+    @include w450 {
+      font-size: 28px;
+    }
+
+    @include w450 {
+      font-size: 26px;
+    }
+  }
+
+  &__descr {
+    max-width: 514px;
+    padding-top: 33px;
+
+    font-size: 20px;
+    line-height: 26px;
+    font-family: "Futura PT - Book", Arial, Helvetica, sans-serif;
+
+    @include w1247 {
+      max-width: 640px;
+
+      font-size: 34px;
+      line-height: 38px;
+
+      &-p:nth-child(1) {
+        display: block;
+      }
+
+      &-p:nth-child(2) {
+        display: block;
+      }
+
+      &-p:nth-child(3) {
+        display: block;
+        max-width: 593px;
+        margin: 0 auto;
+        padding-top: 15px;
+
+        @include w350 {
+          padding-top: 9px;
+        }
+      }
+    }
+
+    @include w720 {
+      font-size: 32px;
+    }
+
+    @include w650 {
+      padding-top: 25px;
+
+      font-size: 26px;
+    }
+
+    @include w550 {
+      padding-top: 22px;
+
+      font-size: 24px;
+      line-height: 34px;
+    }
+
+    @include w450 {
+      padding-top: 20px;
+
+      font-size: 22px;
+      line-height: 28px;
+    }
+
+    @include w400 {
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    @include w350 {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &-p:nth-child(1) {
+      display: block;
+    }
+
+    &-p:nth-child(2) {
+      display: inline;
+    }
+
+    &-p:nth-child(3) {
+      display: inline;
+    }
+  }
+
+  &__phone-catalog {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+
+    @include w1247 {
+      display: none;
+    }
+  }
+
+  &__phone-favourite {
+    position: absolute;
+    bottom: 52px;
+    z-index: 1;
+
+    margin-left: 203px;
+
+    @include w1247 {
+      display: none;
+    }
+  }
+}
+.partners {
+  margin-top: 72px;
+
+  @include w1247 {
+    margin-top: 92px;
+  }
+
+  @include w550 {
+    margin-top: 80px;
+  }
+
+  @include w450 {
+    margin-top: 70px;
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 26px;
+    font-family: "Futura Demi C", Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: $secondaryColor;
+    text-transform: uppercase;
+    letter-spacing: 1.33px;
+
+    @include w650 {
+      font-size: 30px;
+    }
+
+    @include w450 {
+      font-size: 28px;
+    }
+  }
+
+  &__background {
+    background-color: $secondaryColor;
+  }
+
+  &__slider-wrap {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    height: 186px;
+    margin-top: 35px;
+
+    @include w1340 {
+      padding: 0 38px;
+    }
+
+    @include w1247 {
+      height: 217px;
+    }
+
+    @include w720 {
+      height: 176px;
+    }
+
+    @include w650 {
+      height: 166px;
+      margin-top: 25px;
+    }
+
+    @include w550 {
+      height: 156px;
+      margin-top: 22px;
+    }
+
+    @include w450 {
+      height: 146px;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+
+    &.slick-slider {
+      position: static;
+    }
+
+    .slick-track {
+      display: flex;
+      align-items: center;
+    }
+
+    .slick-slide {
+      &[data-slick-index="6"] {
+        @include w-min {
+          margin-right: 20px;
+        }
+
+        @include w1340 {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  &__slide {
+    text-align: center;
+
+    &-img {
+      margin: 0 auto;
+
+      opacity: 0.3;
+
+      transition: all 0.4s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.slider__arrows-general {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 12px;
+  height: 21px;
+  margin: auto;
+}
+
+.slider__arrows {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+
+  width: 38px;
+  height: 38px;
+
+  background-color: #f48078;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  opacity: 0.25;
+
+  &-left {
+    left: 0;
+    &::after {
+      left: -4px;
+
+      background-image: url("../img/arrow_left.svg");
+
+      @extend .slider__arrows-general;
+    }
+  }
+
+  &-right {
+    right: 0;
+    &::after {
+      left: 4px;
+
+      background-image: url("../img/arrow_right.svg");
+
+      @extend .slider__arrows-general;
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+.partners__writing {
+  padding-top: 50px;
+
+  text-align: center;
+
+  @include w550 {
+    padding-top: 40px;
+  }
+
+  &-text {
+    font-size: 24px;
+    line-height: 27px;
+    font-family: "Futura PT - Book", Arial, Helvetica, sans-serif;
+    color: #000000;
+    letter-spacing: 1.2px;
+
+    @include w1247 {
+      font-size: 34px;
+      line-height: 38px;
+      letter-spacing: 0;
+    }
+
+    @include w720 {
+      font-size: 30px;
+    }
+
+    @include w650 {
+      font-size: 26px;
+    }
+
+    @include w550 {
+      font-size: 30px;
+    }
+
+    @include w450 {
+      font-size: 28px;
+    }
+
+    @include w400 {
+      font-size: 24px;
+    }
+  }
+
+  &-btn {
+    margin-top: 40px;
+    padding: 25px 87px;
+
+    font-size: 20px;
+    line-height: 15px;
+    font-family: "Futura Demi C", Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+
+    background-color: $mainColor;
+    border: 2px solid $mainColor;
+    border-radius: 10px;
+
+    transition: all 0.4s;
+
+    @include w1247 {
+      margin-top: 50px;
+      padding: 27px 81px;
+
+      font-size: 30px;
+      line-height: 20px;
+      letter-spacing: 1.35px;
+    }
+
+    @include w720 {
+      font-size: 30px;
+    }
+
+    @include w650 {
+      font-size: 26px;
+    }
+
+    @include w550 {
+      padding: 24px 70px;
+
+      font-size: 26px;
+    }
+
+    @include w450 {
+      padding: 22px 45px;
+
+      font-size: 24px;
+    }
+
+    @include w400 {
+      padding: 20px 35px;
+
+      font-size: 22px;
+    }
+
+    &:hover {
+      color: $mainColor;
+
+      background-color: #ffffff;
+      border: 2px solid $mainColor;
+    }
+  }
+}
+
+.footer {
+  position: relative;
+
+  margin-top: 47px;
+
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+
+  @include w1247 {
+    margin-top: 62px;
+  }
+
+  @include w550 {
+    margin-top: 55px;
+  }
+  &__text {
+    @include w550 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 38px 0;
+
+    color: #ffffff;
+
+    @include w1247 {
+      padding: 50px 0;
+    }
+
+    @include w1000 {
+      flex-direction: column-reverse;
+      padding: 38px 0;
+    }
+  }
+
+  &__copyright {
+    font-size: 14px;
+    line-height: 12px;
+    font-family: "Futura PT - Book", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+
+    @include w1247 {
+      font-size: 18px;
+    }
+
+    @include w1000 {
+      margin-top: 47px;
+
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 17px;
+      text-align: center;
+    }
+  }
+
+  &__info {
+    display: inline-block;
+    margin-top: 15px;
+
+    font-size: 12px;
+    line-height: 12px;
+    font-family: "Futura PT - Book", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+
+    border-bottom: 1px solid #ffffff;
+    opacity: 0.4;
+
+    transition: all 0.4s;
+
+    @include w1247 {
+      margin-top: 25px;
+
+      font-size: 16px;
+    }
+
+    @include w1000 {
+      margin-top: 32px;
+
+      font-size: 16px;
+    }
+
+    @include w450 {
+      font-size: 14px;
+    }
+
+    &:hover {
+      transform: scale(1.03);
+      opacity: 1;
+    }
+  }
+
+  &__margin {
+    margin-left: 54px;
+
+    @include w1247 {
+      margin-left: 30px;
+    }
+
+    @include w550 {
+      margin-left: 0;
+    }
+  }
+
+  &__contact-link {
+    position: relative;
+
+    padding: 12px 12px 12px 40px;
+
+    font-size: 16px;
+    line-height: 13px;
+    font-family: "Futura PT - Book", Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+
+    transition: all 0.4s;
+
+    @include w1247 {
+      padding: 15px 15px 15px 43px;
+    }
+
+    @include w1000 {
+      margin-top: 57px;
+      padding: 27px 79px 27px 110px;
+
+      font-size: 28px;
+      line-height: 22px;
+      letter-spacing: 0;
+    }
+
+    @include w720 {
+      margin-top: 35px;
+      padding: 27px 73px 27px 98px;
+
+      font-size: 30px;
+    }
+
+    @include w650 {
+      font-size: 26px;
+    }
+
+    @include w550 {
+      margin-top: 20px;
+      padding: 24px 73px 24px 98px;
+
+      font-size: 24px;
+    }
+
+    @include w450 {
+      padding: 22px 45px 22px 75px;
+
+      font-size: 22px;
+    }
+
+    @include w400 {
+      padding: 20px 30px 20px 70px;
+
+      font-size: 20px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 12px;
+
+      width: 18px;
+      height: 18px;
+
+      background-image: url("../img/contact.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+
+      @include w1247 {
+        top: 12px;
+        left: 14px;
+      }
+
+      @include w1000 {
+        top: 23px;
+        left: 63px;
+
+        width: 28px;
+        height: 28px;
+
+        background-image: url("../img/contactM.svg");
+      }
+
+      @include w720 {
+        left: 50px;
+      }
+
+      @include w550 {
+        top: 19px;
+      }
+
+      @include w450 {
+        top: 16px;
+        left: 35px;
+      }
+
+      @include w400 {
+        left: 29px;
+      }
+    }
+
+    &:hover {
+      border: 2px solid $mainColor;
+    }
+  }
+}
